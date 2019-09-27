@@ -20,7 +20,7 @@ namespace SalesWebMvc.Services
 
         public List<Seller> FindAll()
         {
-            return _context.Seller.ToList();
+            return _context.Seller.Select(x=>x).ToList();
         }
 
         public void Insert(Seller obj)
